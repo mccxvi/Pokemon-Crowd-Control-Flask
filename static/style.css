@@ -1,0 +1,81 @@
+@font-face {
+font-family: Helvetica-Bold;
+src: url("HelveticaNowDisplay-Bold.otf");
+}
+
+* {
+font-family: Helvetica-Bold;
+}
+
+body {
+background-color: black;
+}
+
+h1 {
+color: #e3f9ff;
+}
+
+h4 {
+  color: #e3f9ff;
+  font-size: 1rem;
+}
+
+input {
+color: #e3f9ff;
+}
+
+.btn-outline-custom {
+  color: #e3f9ff;
+  border-color: #e3f9ff;
+}
+
+.btn-outline-custom:hover {
+  color: black;
+  background-color: #e3f9ff;
+  border-color: #e3f9ff;
+}
+
+.info-pad {
+background-color: #e3f9ff;
+border-radius: 0.3rem;
+padding: 0.5rem;
+}
+
+.text-info-cont {
+ color: black;
+ text-decoration: none;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.modal-title {
+  color: black
+}
+
+.modal-content {
+  background-color: #e3f9ff;
+  border: 1px solid black
+}
+
+.modal-header {
+  border-bottom: 0px;
+}
+
+.btn-close {
+  color: black
+}
+
+.button-show-key {
+  background-color: black;
+  color: #e3f9ff;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  width: auto;
+}
+
+.form-custom-login {
+  margin-top: 0.75rem;
+}
