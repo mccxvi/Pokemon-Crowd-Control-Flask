@@ -47,7 +47,7 @@ app.config['SECRET_KEY'] = 'SECRET_KEY'
 
 Set "YOUR_IP" to your local IP Address.
 ```
-app.run(debug=True, host="YOUR_IP")'
+app.run(debug=True, host="YOUR_IP")
 ```
 
 Change keys for the pynput depending on binded keys in your GBA Emulator.
@@ -71,46 +71,23 @@ start_button = Key.home
 select_button = Key.delete
 ```
 
-## Running App + Registration
+## Running App
 
-Next, you need to run the web app and register your Admin account.
-
+Run "app.py" in your terminal 
 ```
 python app.py
-http://YOUR_IP:5000/addusers
+Key for the current game is: XXXXXX
 ```
 
-After you registered your Admin account, go to the "app.py" and update lines 68 to 78 by<br />
-removing comment signs, adding proper indentation and changing "YOUR_ADMIN_NAME" to your Admin account name.
+Everytime the app starts, it will generate unique six-character key code for the game.
 
-Before /
 
-```
-#    if session['user'] != "YOUR_ADMIN_NAME":
-#        return redirect("https://www.youtube.com/watch?v=ixMHG0DIAK4", code=302)
-#    else:
-    form = AddUsers()
-    if form.validate_on_submit():
-        hashed_authkey = bcrypt.generate_password_hash(form.authkey.data)
-        new_user = users(username=form.username.data, authkey=hashed_authkey)
-        db.session.add(new_user)
-        db.session.commit()
+## Playing
 
-    return render_template("addusers.html", form=form)
-```
-
-After /
+Go to
 
 ```
-    if session['user'] != "YOUR_ADMIN_NAME":
-        return redirect("https://www.youtube.com/watch?v=ixMHG0DIAK4", code=302)
-    else:
-        form = AddUsers()
-        if form.validate_on_submit():
-            hashed_authkey = bcrypt.generate_password_hash(form.authkey.data)
-            new_user = users(username=form.username.data, authkey=hashed_authkey)
-            db.session.add(new_user)
-            db.session.commit()
-
-        return render_template("addusers.html", form=form)
+YOUR_IP:5000/auth
 ```
+
+Choose a nickname and enter the Game Key provided in the terminal.
